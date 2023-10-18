@@ -18,6 +18,22 @@ private RecyclerView recyclerViewCategoryList,recyclerViewPopularlist;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        // Con pig dat
+
+        recyclerViewCategory();
+    }
+
+    private void recyclerViewCategory(){
+        LinearLayoutManager linerLayoutManager=new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false);
+        recyclerViewCategoryList=findViewById(R.id.btn_view1);
+        recyclerViewCategoryList.setLayoutManager(linerLayoutManager);
+
+        ArrayList<CategoryDomain> categoryList=new ArrayList<>();
+        categoryList.add(new CategoryDomain("Pizza","cat_1"));
+        categoryList.add(new CategoryDomain("Burger","cat_2"));
+        categoryList.add(new CategoryDomain("Hotdog","cat_3"));
+        categoryList.add(new CategoryDomain("Drink","cat_4"));
+        categoryList.add(new CategoryDomain("Donut","cat_5"));
+
+        adapter =
     }
 }

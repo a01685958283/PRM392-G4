@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
+import com.example.Adapter.CategoryAdapter;
 import com.example.teamprm392.R;
 import com.example.temprm392.Domain.CategoryDomain;
 
@@ -20,6 +21,13 @@ private RecyclerView recyclerViewCategoryList,recyclerViewPopularlist;
         setContentView(R.layout.activity_main);
 
         recyclerViewCategory();
+        recyclerViewPopular();
+    }
+    private void recyclerViewPopular() {
+        LinearLayoutManager linerLayoutManager = new LinearLayoutManager(this,
+                LinearLayoutManager.HORIZONTAL, false);
+        recyclerViewPopularlist = findViewById(R.id.btn_view2);
+        recyclerViewPopularlist.setLayoutManager(linerLayoutManager);
     }
 
     private void recyclerViewCategory(){
@@ -34,6 +42,7 @@ private RecyclerView recyclerViewCategoryList,recyclerViewPopularlist;
         categoryList.add(new CategoryDomain("Drink","cat_4"));
         categoryList.add(new CategoryDomain("Donut","cat_5"));
 
-        adapter =
+        adapter = new CategoryAdapter(categoryList);
+        recyclerViewCategoryList.setAdapter(adapter);
     }
 }

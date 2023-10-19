@@ -32,7 +32,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position){
         holder.categoryName.setText(categoryDomains.get(position).getTitle());
-        String picUrl;
+        String picUrl="";
         switch (position){
             case 0: {
                 picUrl = " cat_1";

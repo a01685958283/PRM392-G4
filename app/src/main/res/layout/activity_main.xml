@@ -96,8 +96,8 @@
 
                     <ImageView
                         android:id="@+id/imageView8"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="335dp"
+                        android:layout_height="111dp"
                         android:scaleType="fitXY"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -191,20 +191,23 @@
                     android:textSize="16sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="@+id/btn_edittext2"
-                    app:layout_constraintHorizontal_bias="0.059"
+                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="@+id/btn_edittext2"
                     app:layout_constraintTop_toBottomOf="@+id/btn_edittext2" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/btn_view1"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_width="393dp"
+                    android:layout_height="152dp"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/btn_textview11" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/btn_view2"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_width="404dp"
+                    android:layout_height="294dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/btn_textview12" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -212,8 +215,9 @@
     </ScrollView>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
+
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="@+id/scrollView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">

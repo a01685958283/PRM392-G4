@@ -31,12 +31,13 @@ private RecyclerView recyclerViewCategoryList,recyclerViewPopularlist;
         recyclerViewPopularlist = findViewById(R.id.btn_view2);
         recyclerViewPopularlist.setLayoutManager(linerLayoutManager);
 
+
         ArrayList<FoodDomain> foodlist = new ArrayList<>();
         foodlist.add(new FoodDomain("Pepperoni pizza","pizza1", "slices pepperoni, mozzarella cheese, fresh oregano, ground black pepper, pizza sauce",
                 35.0,5 ,20,1000  ));
         foodlist.add(new FoodDomain("Chesse burger","burger", "beef, gouda chesse, special sauce, lettuce, tomat",
                 30.0,4 ,17,1500  ));
-        foodlist.add(new FoodDomain("Vagetable pizza","pizza2", "olive oil, vegetable, pitted kalamata, cherry tomatoas, fresh oregano, basil",
+        foodlist.add(new FoodDomain("Vagetable pizza","pizza3", "olive oil, vegetable, pitted kalamata, cherry tomatoas, fresh oregano, basil",
                 45.0,4 ,20,900  ));
         adapter2 = new RecommendedAdapter(foodlist);
         recyclerViewPopularlist.setAdapter(adapter2);

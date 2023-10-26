@@ -55,12 +55,12 @@
                     android:layout_marginEnd="24dp"
                     app:layout_constraintBottom_toBottomOf="@+id/btn_textview6"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/btn_textview5"
+                    app:layout_constraintTop_toTopOf="@+id/textUser"
                     app:layout_constraintVertical_bias="0.552"
                     app:srcCompat="@drawable/aa" />
 
                 <TextView
-                    android:id="@+id/btn_textview5"
+                    android:id="@+id/textUser"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="32dp"
@@ -80,8 +80,8 @@
                     android:text="Search and Order"
                     android:textSize="16sp"
                     android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="@+id/btn_textview5"
-                    app:layout_constraintTop_toBottomOf="@+id/btn_textview5" />
+                    app:layout_constraintStart_toStartOf="@+id/textUser"
+                    app:layout_constraintTop_toBottomOf="@+id/textUser" />
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/constraintLayout2"

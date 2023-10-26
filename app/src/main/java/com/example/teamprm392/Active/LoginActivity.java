@@ -12,6 +12,7 @@ import com.example.teamprm392.databinding.ActivityLoginBinding;
 
 public class LoginActivity extends AppCompatActivity {
 
+
     ActivityLoginBinding binding;
 
     DatabaseHelper databaseHelper;

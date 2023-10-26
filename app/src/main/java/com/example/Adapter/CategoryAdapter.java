@@ -35,19 +35,19 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
         String picUrl="";
         switch (position){
             case 0: {
-                picUrl = " cat_1";
+                picUrl = "cat_1";
                 break;
             }case 1: {
-                picUrl = " cat_2";
+                picUrl = "cat_2";
                 break;
             }case 2: {
-                picUrl = " cat_3";
+                picUrl = "cat_3";
                 break;
             }case 3: {
-                picUrl = " cat_4";
+                picUrl = "cat_4";
                 break;
             }case 4: {
-                picUrl = " cat_5";
+                picUrl = "cat_5";
                 break;
             }
         }

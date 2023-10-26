@@ -241,14 +241,14 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/imageView5"
+                        android:id="@+id/imageHome"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         app:srcCompat="@drawable/bottom_btn1" />
 
                     <TextView
-                        android:id="@+id/textView11"
+                        android:id="@+id/textHome"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Home"
@@ -264,13 +264,13 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/imageView5"
+                        android:id="@+id/imageProfile"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         app:srcCompat="@drawable/bottom_btn2" />
 
                     <TextView
-                        android:id="@+id/textView11"
+                        android:id="@+id/textProfile"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Profile"
@@ -287,14 +287,14 @@
                     android:visibility="visible">
 
                     <ImageView
-                        android:id="@+id/imageView5"
+                        android:id="@+id/imageCart"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         app:srcCompat="@drawable/bottom_btn5" />
 
                     <TextView
-                        android:id="@+id/textView11"
+                        android:id="@+id/textCart"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Home"
@@ -310,14 +310,14 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/imageView5"
+                        android:id="@+id/imageSupport"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         app:srcCompat="@drawable/bottom_btn3" />
 
                     <TextView
-                        android:id="@+id/textView11"
+                        android:id="@+id/textSupport"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Support"
@@ -333,14 +333,14 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/imageView5"
+                        android:id="@+id/imageSetting"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         app:srcCompat="@drawable/bottom_btn4" />
 
                     <TextView
-                        android:id="@+id/textView11"
+                        android:id="@+id/textSetting"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Settings"

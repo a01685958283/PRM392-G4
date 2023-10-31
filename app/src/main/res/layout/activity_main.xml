@@ -39,7 +39,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="16dp"
-                    android:layout_marginTop="548dp"
+                    android:layout_marginTop="16dp"
                     android:text="Recommended"
                     android:textSize="16sp"
                     android:textStyle="bold"
@@ -197,8 +197,8 @@
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/btn_view1"
-                    android:layout_width="402dp"
-                    android:layout_height="115dp"
+                    android:layout_width="401dp"
+                    android:layout_height="125dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/btn_textview11" />
@@ -206,8 +206,9 @@
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/btn_view2"
                     android:layout_width="408dp"
-                    android:layout_height="177dp"
+                    android:layout_height="298dp"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.333"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/btn_textview12" />
 

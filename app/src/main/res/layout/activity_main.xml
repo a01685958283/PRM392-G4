@@ -229,7 +229,7 @@
             android:layout_gravity="bottom"
             android:backgroundTint="#f6f6f6"
             app:fabCradleMargin="8dp"
-            app:fabCradleRoundedCornerRadius="50dp"
+            app:fabCradleRoundedCornerRadius="45dp"
             app:fabCradleVerticalOffset="6dp">
 
             <LinearLayout

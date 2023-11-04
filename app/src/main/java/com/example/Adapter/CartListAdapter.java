@@ -26,7 +26,7 @@ public class CartListAdapter extends RecyclerView.Adapter<CartListAdapter.ViewHo
     private ManagementCart managementCart;
     ChangeNumberItemsListener changeNumberItemsListener;
 
-    public CartListAdapter(ArrayList<FoodDomain> categoryDomains, Context context,ChangeNumberItemsListener changeNumberItemsListener ) {
+    public CartListAdapter(ArrayList<FoodDomain> listFoodSelected, Context context,ChangeNumberItemsListener changeNumberItemsListener ) {
         this.listFoodSelected = listFoodSelected;
         managementCart = new ManagementCart(context);
         this.changeNumberItemsListener=changeNumberItemsListener;
@@ -58,15 +58,10 @@ public class CartListAdapter extends RecyclerView.Adapter<CartListAdapter.ViewHo
             changeNumberItemsListener.changed();
         }));
 
-        holder.minusItem.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                managementCart.minusNumberFood(listFoodSelected,position,() ->{
-                    notifyDataSetChanged();
-                    changeNumberItemsListener.changed();
-                });
-            }
-        });
+        holder.minusItem.setOnClickListener(v -> managementCart.minusNumberFood(listFoodSelected,position,() ->{
+            notifyDataSetChanged();
+            changeNumberItemsListener.changed();
+        }));
     }
     @Override
     public int getItemCount() { return listFoodSelected.size(); }

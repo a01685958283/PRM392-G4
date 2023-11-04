@@ -88,10 +88,9 @@
                             android:layout_height="wrap_content"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.494"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintVertical_bias="0.0"
+                            app:layout_constraintVertical_bias="0.666"
                             app:srcCompat="@drawable/white_circle" />
 
                         <TextView
@@ -104,10 +103,9 @@
                             android:textStyle="bold"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toStartOf="@+id/plusCardBtn"
-                            app:layout_constraintHorizontal_bias="0.566"
+                            app:layout_constraintHorizontal_bias="0.531"
                             app:layout_constraintStart_toEndOf="@+id/minusCardBtn"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintVertical_bias="0.0" />
+                            app:layout_constraintTop_toTopOf="parent" />
 
                         <ImageView
                             android:id="@+id/plusCardBtn"

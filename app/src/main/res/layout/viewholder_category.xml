@@ -29,7 +29,6 @@
         android:textColor="#6e6e70"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/categoryPic"
-        app:layout_constraintHorizontal_bias="0.173"
         app:layout_constraintStart_toStartOf="@+id/categoryPic"
         app:layout_constraintTop_toBottomOf="@+id/categoryPic" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,4 +1,4 @@
-package com.example.teamprm392.Active;
+package com.example.Active;
 
 import android.content.ContentValues;
 import android.content.Context;

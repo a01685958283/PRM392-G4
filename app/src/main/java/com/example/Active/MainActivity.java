@@ -1,17 +1,20 @@
 
-package com.example.teamprm392.Active;
+package com.example.Active;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.LinearLayout;
 
 import com.example.Adapter.CategoryAdapter;
 import com.example.Adapter.RecommendedAdapter;
 import com.example.teamprm392.R;
-import com.example.temprm392.Domain.CategoryDomain;
-import com.example.temprm392.Domain.FoodDomain;
+import com.example.Domain.CategoryDomain;
+import com.example.Domain.FoodDomain;
 
 import java.util.ArrayList;
 
@@ -25,6 +28,26 @@ private RecyclerView recyclerViewCategoryList,recyclerViewPopularlist;
 
         recyclerViewCategory();
         recyclerViewPopular();
+        bottomNavigation();
+    }
+
+    private void bottomNavigation(){
+        LinearLayout homeBtn=findViewById(R.id.homeBtn);
+        LinearLayout cartBtn=findViewById(R.id.cartBtn);
+
+        homeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,MainActivity.class));
+            }
+        });
+
+        cartBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,CartActivity.class));
+            }
+        });
     }
     private void recyclerViewPopular() {
         LinearLayoutManager linerLayoutManager = new LinearLayoutManager(this,

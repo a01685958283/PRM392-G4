@@ -1,4 +1,4 @@
-package com.example.teamprm392.Active;
+package com.example.Active;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
-import com.example.teamprm392.R;
 import com.example.teamprm392.databinding.ActivityLoginBinding;
 
 public class LoginActivity extends AppCompatActivity {

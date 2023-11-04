@@ -1,5 +1,6 @@
 package com.example.Adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -37,9 +38,9 @@ public class CartListAdapter extends RecyclerView.Adapter<CartListAdapter.ViewHo
         View inflate = LayoutInflater.from(parent.getContext()).inflate(R.layout.viewholder_cart,parent,false);
         return new ViewHolder(inflate);
     }
-    @NonNull
+
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position){
+    public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") int position){
         holder.title.setText(listFoodSelected.get(position).getTitle());
         holder.feeEachItem.setText("$"+listFoodSelected.get(position).getFee());
         holder.totalEachItem.setText("$"+Math.round(listFoodSelected.get(position).getNumberInCart()*listFoodSelected.get(position).getFee()));
@@ -76,9 +77,9 @@ public class CartListAdapter extends RecyclerView.Adapter<CartListAdapter.ViewHo
         TextView totalEachItem,num;
         public ViewHolder(@NonNull View itemView){
             super(itemView);
-            title = itemView.findViewById(R.id.title);
+            title = itemView.findViewById(R.id.titleTxt);
             Pic = itemView.findViewById(R.id.pic);
-            feeEachItem= itemView.findViewById(R.id.fee);
+            feeEachItem= itemView.findViewById(R.id.feeEachItem);
             totalEachItem = itemView.findViewById(R.id.totalEachItem);
             plusItem = itemView.findViewById(R.id.plusCardBtn);
             minusItem = itemView.findViewById(R.id.minusCardBtn);

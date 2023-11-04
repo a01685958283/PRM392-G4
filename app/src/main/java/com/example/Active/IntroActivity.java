@@ -1,4 +1,4 @@
-package com.example.teamprm392.Active;
+package com.example.Active;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;

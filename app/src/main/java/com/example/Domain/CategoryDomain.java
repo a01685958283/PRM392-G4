@@ -1,4 +1,4 @@
-package com.example.temprm392.Domain;
+package com.example.Domain;
 
 public class CategoryDomain {
     private String title;

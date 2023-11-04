@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.teamprm392.R;
-import com.example.temprm392.Domain.CategoryDomain;
+import com.example.Domain.CategoryDomain;
 
 import java.util.ArrayList;
 

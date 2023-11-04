@@ -1,5 +1,6 @@
 package com.example.Adapter;
 
+import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -41,9 +42,10 @@ public class RecommendedAdapter extends RecyclerView.Adapter<RecommendedAdapter.
                 .load(drawableResourceId).into(holder.Pic);
 
         holder.btn_add.setOnClickListener(v -> {
-                Intent intent=new Intent(holder.itemView.getContext(), ShowDetailActivity.class);
+                Context con = holder.itemView.getContext();
+                Intent intent= new Intent(con, ShowDetailActivity.class);
                 intent.putExtra("object",RecommendedDomains.get(position));
-                holder.itemView.getContext().startActivity(intent);
+                con.startActivity(intent);
         });
 
     }

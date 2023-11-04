@@ -32,14 +32,14 @@ public class ManagementCart {
         } else {
             listFood.add(item);
         }
-        tinyDB.putListObject("CardList",listFood);
+        tinyDB.putListObject("CartList",listFood);
         Toast.makeText(context, "Add to your Cart", Toast.LENGTH_SHORT).show();
     }
 
     ;
 
     public ArrayList<FoodDomain> getListCart() {
-        return tinyDB.getListObject("CradList");
+        return tinyDB.getListObject("CartList");
     }
 
     public void minusNumberFood(ArrayList<FoodDomain> listfood, int position, ChangeNumberItemsListener changeNumberItemsListener) {
@@ -48,12 +48,12 @@ public class ManagementCart {
         } else {
             listfood.get(position).setNumberInCart(listfood.get(position).getNumberInCart() - 1);
         }
-        tinyDB.putListObject("CardLsit",listfood);
+        tinyDB.putListObject("CartList",listfood);
         changeNumberItemsListener.changed();
     }
     public void plustNumberFood(ArrayList<FoodDomain> listfood, int position, ChangeNumberItemsListener changeNumberItemsListener){
         listfood.get(position).setNumberInCart(listfood.get(position).getNumberInCart()+1);
-        tinyDB.putListObject("CardList",listfood);
+        tinyDB.putListObject("CartList",listfood);
         changeNumberItemsListener.changed();
     }
 

@@ -22,6 +22,12 @@
             android:name="com.example.Active.MainActivity"
             android:exported="false" />
         <activity
+            android:name="com.example.Active.ShowDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.Active.CartActivity"
+            android:exported="false" />
+        <activity
             android:name="com.example.Active.LoginActivity"
             android:exported="true">
             <intent-filter>

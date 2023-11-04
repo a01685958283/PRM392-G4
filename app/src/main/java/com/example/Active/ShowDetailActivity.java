@@ -19,7 +19,9 @@ public class ShowDetailActivity extends AppCompatActivity {
     private FoodDomain object;
     private int numberOrder = 1;
     private ManagementCart managementCart;
-    protected void OnCreate(Bundle saveInstanceState){
+
+    @Override
+    protected void onCreate(Bundle saveInstanceState){
         super.onCreate(saveInstanceState);
         setContentView(R.layout.activity_show_detail);
 
@@ -74,7 +76,7 @@ public class ShowDetailActivity extends AppCompatActivity {
         });
     }
 
-        private void iniView() {
+    private void iniView() {
         addToCartBtn=findViewById(R.id.addToCartBtn);
         titleTxt=findViewById(R.id.titleTxt);
         feeTxt=findViewById(R.id.priceTxt);

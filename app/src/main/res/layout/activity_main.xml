@@ -197,19 +197,25 @@
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/btn_view1"
-                    android:layout_width="402dp"
-                    android:layout_height="115dp"
+                    android:layout_width="407dp"
+                    android:layout_height="160dp"
+                    android:layout_marginBottom="20dp"
+                    app:layout_constraintBottom_toTopOf="@+id/btn_textview12"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/btn_textview11" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/btn_view2"
-                    android:layout_width="408dp"
-                    android:layout_height="177dp"
+                    android:layout_width="409dp"
+                    android:layout_height="190dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/btn_textview12" />
+                    app:layout_constraintTop_toBottomOf="@+id/btn_textview12"
+                    app:layout_constraintVertical_bias="0.0" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>

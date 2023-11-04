@@ -56,6 +56,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
                 .load(drawableResourceId).into(holder.categoryPic);
 
     }
+    
     @Override
     public int getItemCount() { return categoryDomains.size(); }
 

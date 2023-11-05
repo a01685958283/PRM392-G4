@@ -23,8 +23,8 @@
 
             <ImageView
                 android:id="@+id/foodPic"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="411dp"
+                android:layout_height="327dp"
                 app:srcCompat="@drawable/burger_large"
                 tools:layout_margin="24dp" />
 
@@ -67,10 +67,11 @@
                             android:id="@+id/minusCardBtn"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="4dp"
+                            android:layout_marginStart="16dp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.555"
                             app:srcCompat="@drawable/minus" />
 
                         <androidx.constraintlayout.widget.ConstraintLayout
@@ -88,10 +89,9 @@
                             android:layout_height="wrap_content"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.494"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintVertical_bias="0.0"
+                            app:layout_constraintVertical_bias="0.666"
                             app:srcCompat="@drawable/white_circle" />
 
                         <TextView
@@ -104,20 +104,19 @@
                             android:textStyle="bold"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toStartOf="@+id/plusCardBtn"
-                            app:layout_constraintHorizontal_bias="0.566"
+                            app:layout_constraintHorizontal_bias="0.531"
                             app:layout_constraintStart_toEndOf="@+id/minusCardBtn"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintVertical_bias="0.0" />
+                            app:layout_constraintTop_toTopOf="parent" />
 
                         <ImageView
                             android:id="@+id/plusCardBtn"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginEnd="4dp"
+                            android:layout_marginEnd="16dp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintVertical_bias="0.0"
+                            app:layout_constraintVertical_bias="0.555"
                             app:srcCompat="@drawable/plus" />
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -126,12 +125,14 @@
                         android:id="@+id/priceTxt"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
                         android:text="$0"
                         android:textColor="#000000"
-                        android:textSize="24sp"
+                        android:textSize="20sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.538" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
             </LinearLayout>
@@ -287,7 +288,6 @@
                     android:layout_weight="0.5"
                     android:background="@drawable/yellow_btn_background"
                     android:drawableStart="@drawable/bottom_btn5"
-                    android:drawablePadding="5dp"
                     android:elevation="3dp"
                     android:gravity="center"
                     android:padding="8dp"
@@ -295,6 +295,21 @@
                     android:textColor="#ffffff"
                     android:textSize="20sp"
                     android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/backBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="65dp"
+                    android:layout_margin="8dp"
+                    android:layout_weight="0.5"
+                    android:backgroundTint="#B6BAB6"
+                    android:drawablePadding="5dp"
+                    android:elevation="3dp"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="Back"
+                    android:textSize="20dp"
+                    app:cornerRadius="@dimen/cardview_compat_inset_shadow" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

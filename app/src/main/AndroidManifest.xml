@@ -13,6 +13,9 @@
         android:theme="@style/Theme.TeamPRM392"
         tools:targetApi="31">
         <activity
+            android:name="com.example.Active.ShowDetailActivity"
+            android:exported="false" />
+        <activity
             android:name="com.example.Active.SignupActivity"
             android:exported="false" />
         <activity
@@ -20,6 +23,12 @@
             android:exported="false" />
         <activity
             android:name="com.example.Active.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.Active.ShowDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.Active.CartActivity"
             android:exported="false" />
         <activity
             android:name="com.example.Active.LoginActivity"

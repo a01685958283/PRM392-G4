@@ -26,7 +26,7 @@ public class CartListAdapter extends RecyclerView.Adapter<CartListAdapter.ViewHo
     private ManagementCart managementCart;
     ChangeNumberItemsListener changeNumberItemsListener;
 
-    public CartListAdapter(ArrayList<FoodDomain> categoryDomains, Context context,ChangeNumberItemsListener changeNumberItemsListener ) {
+    public CartListAdapter(ArrayList<FoodDomain> listFoodSelected, Context context,ChangeNumberItemsListener changeNumberItemsListener ) {
         this.listFoodSelected = listFoodSelected;
         managementCart = new ManagementCart(context);
         this.changeNumberItemsListener=changeNumberItemsListener;
@@ -40,7 +40,7 @@ public class CartListAdapter extends RecyclerView.Adapter<CartListAdapter.ViewHo
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") int position){
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position){
         holder.title.setText(listFoodSelected.get(position).getTitle());
         holder.feeEachItem.setText("$"+listFoodSelected.get(position).getFee());
         holder.totalEachItem.setText("$"+Math.round(listFoodSelected.get(position).getNumberInCart()*listFoodSelected.get(position).getFee()));
@@ -58,15 +58,10 @@ public class CartListAdapter extends RecyclerView.Adapter<CartListAdapter.ViewHo
             changeNumberItemsListener.changed();
         }));
 
-        holder.minusItem.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                managementCart.minusNumberFood(listFoodSelected,position,() ->{
-                    notifyDataSetChanged();
-                    changeNumberItemsListener.changed();
-                });
-            }
-        });
+        holder.minusItem.setOnClickListener(v -> managementCart.minusNumberFood(listFoodSelected,position,() ->{
+            notifyDataSetChanged();
+            changeNumberItemsListener.changed();
+        }));
     }
     @Override
     public int getItemCount() { return listFoodSelected.size(); }

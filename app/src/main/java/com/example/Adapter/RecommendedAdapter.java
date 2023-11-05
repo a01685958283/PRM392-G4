@@ -1,5 +1,6 @@
 package com.example.Adapter;
 
+import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -38,12 +39,13 @@ public class RecommendedAdapter extends RecyclerView.Adapter<RecommendedAdapter.
         int drawableResourceId = holder.itemView.getContext().getResources().
                 getIdentifier(RecommendedDomains.get(position).getPic(), "drawable",holder.itemView.getContext().getPackageName());
         Glide.with(holder.itemView.getContext())
-                .load(drawableResourceId).into(holder.Pic);
+                .load(drawableResourceId).into(holder.pic);
 
         holder.btn_add.setOnClickListener(v -> {
-                Intent intent=new Intent(holder.itemView.getContext(), ShowDetailActivity.class);
+                Context con = holder.itemView.getContext();
+                Intent intent= new Intent(con, ShowDetailActivity.class);
                 intent.putExtra("object",RecommendedDomains.get(position));
-                holder.itemView.getContext().startActivity(intent);
+                con.startActivity(intent);
         });
 
     }
@@ -52,12 +54,12 @@ public class RecommendedAdapter extends RecyclerView.Adapter<RecommendedAdapter.
 
     public class ViewHolder extends RecyclerView.ViewHolder{
         TextView title, fee;
-        ImageView Pic;
+        ImageView pic;
         ImageView btn_add;
         public ViewHolder(@NonNull View itemView){
             super(itemView);
             title = itemView.findViewById(R.id.title);
-            Pic = itemView.findViewById(R.id.pic);
+            pic = itemView.findViewById(R.id.pic);
             fee= itemView.findViewById(R.id.fee);
             btn_add = itemView.findViewById(R.id.btn_add);
         }

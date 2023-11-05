@@ -42,10 +42,15 @@ public class RecommendedAdapter extends RecyclerView.Adapter<RecommendedAdapter.
                 .load(drawableResourceId).into(holder.pic);
 
         holder.btn_add.setOnClickListener(v -> {
-                Context con = holder.itemView.getContext();
-                Intent intent= new Intent(con, ShowDetailActivity.class);
-                intent.putExtra("object",RecommendedDomains.get(position));
-                con.startActivity(intent);
+
+//                Context con = holder.itemView.getContext();
+//                Intent intent= new Intent(con, ShowDetailActivity.class);
+//                intent.putExtra("object",RecommendedDomains.get(position));
+//                con.startActivity(intent);
+
+                Intent intent = new Intent(holder.itemView.getContext(), ShowDetailActivity.class);
+                intent.putExtra("object", RecommendedDomains.get(position));
+                holder.itemView.getContext().startActivity(intent);
         });
 
     }

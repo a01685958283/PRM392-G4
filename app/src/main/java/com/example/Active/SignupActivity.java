@@ -26,19 +26,24 @@ public class SignupActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                String email = binding.signupEmail.getText().toString();
+                String phone = binding.signupPhone.getText().toString();
                 String password = binding.signupPassword.getText().toString();
                 String confirmPassword = binding.signupConfirm.getText().toString();
 
-                if(email.equals("")||password.equals("")||confirmPassword.equals("")){
+                if(phone.equals("")||password.equals("")||confirmPassword.equals("")){
                     Toast.makeText(SignupActivity.this, "", Toast.LENGTH_SHORT).show();
+
+                }
+                //check valid phone number
+                else if (!phone.matches("\\d+")) {
+                    Toast.makeText(SignupActivity.this, "Invalid phone number. Please try again!", Toast.LENGTH_SHORT).show();
 
                 }
                 else{
                     if(password.equals(confirmPassword)){
-                        Boolean checkUserEmail = databaseHelper.checkEmail(email);
-                        if(checkUserEmail == false){
-                            Boolean insert = databaseHelper.insertData(email, password);
+                        Boolean checkUserPhone = databaseHelper.checkPhone(phone);
+                        if(checkUserPhone == false){
+                            Boolean insert = databaseHelper.insertData(phone, password);
                             if(insert == true){
                                 Toast.makeText(SignupActivity.this, "Signup Successfully!", Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(getApplicationContext(), LoginActivity.class);

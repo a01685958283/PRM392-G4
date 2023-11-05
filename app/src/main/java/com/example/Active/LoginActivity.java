@@ -27,15 +27,19 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                String email = binding.loginEmail.getText().toString();
+                String phone = binding.loginPhone.getText().toString();
                 String password = binding.loginPassword.getText().toString();
 
-                if(email.equals("")||password.equals("")){
+                if(phone.equals("")||password.equals("")){
                     Toast.makeText(LoginActivity.this, "All fields are mandatory", Toast.LENGTH_SHORT).show();
 
                 }
-                else{
-                    Boolean checkCredentials = databaseHelper.checkEmailPassword(email, password);
+                //check valid phone number
+                else if (!phone.matches("\\d+")) {
+                    Toast.makeText(LoginActivity.this, "Invalid phone number. Please try again!", Toast.LENGTH_SHORT).show();
+                    
+                } else{
+                    Boolean checkCredentials = databaseHelper.checkPhonePassword(phone, password);
                     if(checkCredentials == true){
                         Toast.makeText(LoginActivity.this, "Login Successfully!", Toast.LENGTH_SHORT).show();
                         Intent intent  = new Intent(getApplicationContext(), IntroActivity.class);

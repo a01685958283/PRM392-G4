@@ -19,14 +19,15 @@
             android:name="com.example.Active.SignupActivity"
             android:exported="false" />
         <activity
+            android:name="com.example.Active.ShowDetailActivity"
+            android:exported="false" />
+        <activity
             android:name="com.example.Active.IntroActivity"
             android:exported="false" />
         <activity
             android:name="com.example.Active.MainActivity"
             android:exported="false" />
-        <activity
-            android:name="com.example.Active.ShowDetailActivity"
-            android:exported="false" />
+
         <activity
             android:name="com.example.Active.CartActivity"
             android:exported="false" />

@@ -40,6 +40,7 @@ public class CartActivity extends AppCompatActivity {
     private void bottomNavigation(){
         LinearLayout homeBtn=findViewById(R.id.homeBtn);
         LinearLayout cartBtn=findViewById(R.id.cartBtn);
+        LinearLayout profileBtn =findViewById(R.id.profileBtn);
 
         homeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,10 +49,17 @@ public class CartActivity extends AppCompatActivity {
             }
         });
 
+        profileBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(CartActivity.this, ProfileActivity.class));
+            }
+        });
+
         cartBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(CartActivity.this,CartActivity.class));
+                startActivity(new Intent(CartActivity.this, CartActivity.class));
             }
         });
     }

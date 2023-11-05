@@ -39,7 +39,8 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
-    implementation 'com.google.android.material:material:1.4.0-beta01'
-    implementation 'com.github.bumptech.glide:glide:4.8.0'
-    implementation 'com.google.code.gson:gson:2.8.7'
+    implementation 'com.google.android.material:material:1.4.0-beta01' //một dependency của thư viện Material Design.
+    // Thư viện này cung cấp các component và widget để tạo giao diện người dùng theo phong cách Material Design.
+    implementation 'com.github.bumptech.glide:glide:4.8.0' //cung cấp một cách đơn giản và hiệu quả để tải và hiển thị hình ảnh trong ứng dụng Android.
+    implementation 'com.google.code.gson:gson:2.8.7' //một phần khai báo phần phụ thuộc trong hệ thống xây dựng Gradle dành cho các ứng dụng Android
 }

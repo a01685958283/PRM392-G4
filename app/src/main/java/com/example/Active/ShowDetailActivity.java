@@ -19,6 +19,7 @@ public class ShowDetailActivity extends AppCompatActivity {
     private FoodDomain object;
     private int numberOrder = 1;
     private ManagementCart managementCart;
+
     @Override
     protected void onCreate(Bundle saveInstanceState){
         super.onCreate(saveInstanceState);

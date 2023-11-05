@@ -1,11 +1,14 @@
 package com.example.Active;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.bumptech.glide.Glide;
 import com.example.Domain.FoodDomain;
@@ -17,6 +20,8 @@ public class ShowDetailActivity extends AppCompatActivity {
     private TextView titleTxt, feeTxt, descriptionTxt, numberOrderTxt,totalPriceTxt,starTxt,caloryTxt,timeTxt;
     private ImageView plusBtn, minusBtn, picFood;
     private FoodDomain object;
+
+    private Button backBtn;
     private int numberOrder = 1;
     private ManagementCart managementCart;
 
@@ -30,6 +35,7 @@ public class ShowDetailActivity extends AppCompatActivity {
         iniView();
         getBundle();
     }
+
 
     private void getBundle(){
         object=(FoodDomain)getIntent().getSerializableExtra("object");
@@ -74,6 +80,13 @@ public class ShowDetailActivity extends AppCompatActivity {
             managementCart.insertFood(object);
                 }
         });
+
+        backBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ShowDetailActivity.this,MainActivity.class));
+            }
+        });
     }
 
     private void iniView() {
@@ -89,5 +102,6 @@ public class ShowDetailActivity extends AppCompatActivity {
         starTxt=findViewById(R.id.starTxt);
         caloryTxt=findViewById(R.id.caloriesTxt);
         timeTxt=findViewById(R.id.timeTxt);
+        backBtn=findViewById(R.id.backBtn);
     }
 }

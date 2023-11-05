@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import com.example.model.User;
+import com.example.model.UserManager;
 import com.example.teamprm392.databinding.ActivityLoginBinding;
 
 public class LoginActivity extends AppCompatActivity {
@@ -44,6 +46,14 @@ public class LoginActivity extends AppCompatActivity {
                         Toast.makeText(LoginActivity.this, "Login Successfully!", Toast.LENGTH_SHORT).show();
                         Intent intent  = new Intent(getApplicationContext(), IntroActivity.class);
                         startActivity(intent);
+
+                        //set user
+                        User user = databaseHelper.getUserByPhone(phone);
+                        UserManager userManager = new UserManager();
+                        userManager.setUser(user);
+
+
+
                     }else{
                         Toast.makeText(LoginActivity.this, "Invalid Credentials", Toast.LENGTH_SHORT).show();
                     }

@@ -8,6 +8,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
 
+import com.example.model.User;
+
 public class DatabaseHelper extends SQLiteOpenHelper {
 
     public static final String databaseName = "Signup_pro.db";
@@ -43,11 +45,35 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public Boolean checkPhone(String phone){
         SQLiteDatabase MyDatabase = this.getWritableDatabase();
         Cursor cursor = MyDatabase.rawQuery("Select * from users where phone = ?", new String[]{phone});
+
         if(cursor.getCount() > 0) {
             return true;
         }else {
             return false;
         }
+    }
+
+    //get user by phoneNumber
+    public User getUserByPhone(String phone) {
+        User user = new User();
+        SQLiteDatabase MyDatabase = this.getWritableDatabase();
+        Cursor cursor = MyDatabase.rawQuery("Select * from users where phone = ?", new String[]{phone});
+
+        if (cursor != null) {
+            if (cursor.moveToFirst()) {
+                do {
+                    String phoneNumber = cursor.getString(cursor.getColumnIndex("phone"));
+
+                    user.setPhoneNumber(phoneNumber);
+
+
+                    // Xử lý dữ liệu theo ý muốn
+                } while (cursor.moveToNext()); // Di chuyển tới dòng tiếp theo (nếu có)
+            }
+            cursor.close();
+        }
+
+        return user;
     }
 
     public Boolean checkPhonePassword(String phone, String password){

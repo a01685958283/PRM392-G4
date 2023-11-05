@@ -34,11 +34,19 @@ private RecyclerView recyclerViewCategoryList,recyclerViewPopularlist;
     private void bottomNavigation(){
         LinearLayout homeBtn=findViewById(R.id.homeBtn);
         LinearLayout cartBtn=findViewById(R.id.cartBtn);
+        LinearLayout profileBtn=findViewById(R.id.profileBtn);
 
         homeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this,MainActivity.class));
+            }
+        });
+
+        profileBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, ProfileActivity.class));
             }
         });
 
@@ -49,6 +57,7 @@ private RecyclerView recyclerViewCategoryList,recyclerViewPopularlist;
             }
         });
     }
+
     private void recyclerViewPopular() {
         LinearLayoutManager linerLayoutManager = new LinearLayoutManager(this,
                 LinearLayoutManager.HORIZONTAL, false);
